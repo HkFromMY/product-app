@@ -1,3 +1,4 @@
+const res = require('express/lib/response');
 const mongoose = require('mongoose');
 const URL = 'mongodb://localhost:27017';
 const databaseName = 'ProductDb';
@@ -21,6 +22,12 @@ class ProductDb {
                 required: true,
                 unique: true
             },
+            type: {
+                type: String,
+                required: true,
+                unique: false,
+                lowercase: true
+            },
             price: {
                 type: Number,
                 required: true,
@@ -35,20 +42,6 @@ class ProductDb {
 
         return mongoose.model("Product", productSchema);
     }
-
-    // basic CRUD
-    getAllProducts() {}
-
-    getOneProduct(id) {}
-
-    addNewProduct(product) {
-
-    }
-
-    updateOneProduct(id, newProduct) {}
-
-    deleteOneProduct(id) {}
-    
 }
 
 module.exports = new ProductDb();
