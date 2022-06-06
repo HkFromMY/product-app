@@ -1,0 +1,104 @@
+.home-page {
+    max-width: 1084px;
+    margin: 7.5% auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: 48px;
+}
+
+.home-banner,
+.welcome-text {
+    width: 45%;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-title {
+    color: #0d1e24;
+    letter-spacing: 4px;
+    font-size: 48px;
+}
+
+.home-description {
+    letter-spacing: 2px;
+    line-height: 32px;
+}
+
+.shop-button {
+    align-self: center;
+    width: 45%;
+    margin-top: 24px;
+    padding: 12px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #0d1e24;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.shop-button:hover {
+    opacity: .90;
+}
+
+.shop-button:active {
+    transform: scale(0.95);
+}
+
+.show-more {
+    max-width: 1084px;
+    margin: 24px auto;
+    text-align: center;
+}
+
+.show-more-button {
+    max-width: 250px;
+    padding: 12px 56px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    background-color: #63c4ea;
+    box-shadow: 1px 1px 5px #0d1e24;
+    color: white;
+    cursor: pointer;
+}
+
+.show-more-button:hover {
+    background-color: #3db8e9;
+}
+
+.show-more-button:active {
+    background-color: #2198c7;
+}
+
+@media only screen and (max-width: 768px) {
+    /* for mobile users */
+
+    .home-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+    }
+
+    .home-banner {
+        width: 85%;
+        margin: 24px 0;
+    }
+
+    .welcome-text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .home-title {
+        font-size: 32px;
+    }
+}
